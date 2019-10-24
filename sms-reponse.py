@@ -19,19 +19,20 @@ a = messages[0].content
 while 1:
   sleep(1)
   messages = service.fetch_message_history()
-  print(a,x)
+  print(a,l)
   if a == messages[0].content:
     pass
   else:
-    if message[0].phone == y:
-      if message.content != liste[l-1]:
+    if messages[0].phone == y:
+      if messages.content != liste[l-1]:
         service.send_message(y, liste[l])
         a = messages[0].content
         print(a,l)
         l = l+1
         if l == len(liste):
           l = 0
-      else:
+    else:
+      if messages.content != liste[k-1]:
         service.send_message(y, liste[k])
         a = messages[0].content
         print(a,k)
