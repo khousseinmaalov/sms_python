@@ -7,7 +7,7 @@ from time import sleep
 x = input("ip locale: ")
 y = input("numéro cible: ")
 z = input("message: ")
-snk = int(input("nb de réptésions"))
+snk = int(input("nb de réptésions: "))
 
 ip = IPv4Address(x)
 session = AirmoreSession(ip)
