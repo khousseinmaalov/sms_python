@@ -32,7 +32,7 @@ while 1:
         if l == len(liste):
           l = 0
     else:
-      if messages.content != liste[k-1]:
+      if messages[0].content != liste[k-1]:
         service.send_message(messages[0].phone, liste[k])
         a = messages[0].content
         print(a,k)
