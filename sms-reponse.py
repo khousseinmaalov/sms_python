@@ -24,7 +24,7 @@ while 1:
     pass
   else:
     if messages[0].phone == y:
-      if messages.content != liste[l-1]:
+      if messages[0].content != liste[l-1]:
         service.send_message(y, liste[l])
         a = messages[0].content
         print(a,l)
