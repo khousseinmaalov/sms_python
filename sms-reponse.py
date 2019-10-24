@@ -8,16 +8,12 @@ l = 0
 liste = ["oui", "non"]
 listee = ["vrai", "faux"]
 
-x = input("ip locale: ")
-y = input("numéro cible: ")
-z = input("message: ")
-snk = int(input("nb de réptésions: "))
-
 ip = IPv4Address(x)
 session = AirmoreSession(ip)
 was_accepted = session.request_authorization()
 
 service = MessagingService(session)
+messages = service.fetch_message_history()
 a = messages[0].content
 
 while 1:
