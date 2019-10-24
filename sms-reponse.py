@@ -8,7 +8,7 @@ l = 0
 liste = ["oui", "non"]
 listee = ["vrai", "faux"]
 
-ip = IPv4Address(x)
+ip = IPv4Address("votre ip")
 session = AirmoreSession(ip)
 was_accepted = session.request_authorization()
 
@@ -23,9 +23,9 @@ while 1:
   if a == messages[0].content:
     pass
   else:
-    if messages[0].phone == y:
+    if messages[0].phone == "le numero":
       if messages[0].content != liste[l-1]:
-        service.send_message(y, liste[l])
+        service.send_message("le numero", liste[l])
         a = messages[0].content
         print(a,l)
         l = l+1
