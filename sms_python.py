@@ -1,4 +1,4 @@
-from ipadrress import IPv4Address
+from ipaddress import IPv4Address
 from pyairmore.request import AirmoreSession
 from pyairmore.services.messaging import MessagingService
 from time import sleep
@@ -9,7 +9,7 @@ y = input("numéro cible: ")
 z = input("message: ")
 snk = int(input("nb de réptésions"))
 
-ip = IPv4Adrress(x)
+ip = IPv4Address(x)
 session = AirmoreSession(ip)
 was_accepted = session.request_authorization()
 
